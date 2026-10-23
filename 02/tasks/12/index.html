@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <title>12 Relative Length EM REM</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+    }
+
+    #my-first-div,
+    #the-second-one {
+      border: 2px solid black;
+      margin: 5px;
+      padding: 5px;
+      width: 400px;
+    }
+
+    #my-first-div h2 {
+      font-size: 0.8em;
+    }
+
+    #the-second-one h3 {
+      font-size: 0.8em;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div id="my-first-div">
+        <h2>First h2 heading</h2>
+        <h3>First h3 heading</h3>
+        <p>Here is some nice fake content</p>
+      </div>
+
+      <div id="the-second-one">
+        <h2>Second h2 heading</h2>
+        <h3>Second h3 heading</h3>
+        <p>More fake content but now in the second container</p>
+      </div>
+    </div>
+  </body>
+</html>

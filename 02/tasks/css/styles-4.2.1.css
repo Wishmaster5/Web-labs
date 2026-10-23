@@ -1,0 +1,20 @@
+.bg-img {
+  background: url("../img/image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 800;
+}

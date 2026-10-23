@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #101e38;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.planet-wrapper {
+  position: relative;
+  isolation: isolate;
+  width: 350px;
+  height: 350px;
+}
+
+.planet {
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+}
+
+.sun {
+  background-color: #c8968f;
+  z-index: 1;
+  animation: move-sun 5s linear infinite;
+}
+
+.moon {
+  background-color: #101e38;
+}
+
+.moon {
+  z-index: 2;
+}
+
+@keyframes move-sun {
+  0% {
+    transform: translate(0);
+    box-shadow: 0px 0px 40px 15px #c8968f;
+  }
+  25% {
+    transform: translate(10%, -10%);
+    box-shadow: none;
+  }
+  50% {
+    transform: translate(0);
+    box-shadow: 0px 0px 40px 15px #c8968f;
+  }
+  75% {
+    transform: translate(-10%, 10%);
+    box-shadow: none;
+  }
+  100% {
+    transform: translate(0);
+    box-shadow: 0px 0px 40px 15px #c8968f;
+  }
+}

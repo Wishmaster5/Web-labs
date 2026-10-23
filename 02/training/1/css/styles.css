@@ -1,0 +1,24 @@
+body {
+  background: url("https://github.com/erv1988/Web-development-tasks-v2024/blob/master/02/img/background-vertical.jpg?raw=true")
+    0 0 / cover repeat-y;
+  padding-left: 20px;
+}
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  color: red;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+p:first-of-type {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: green;
+}

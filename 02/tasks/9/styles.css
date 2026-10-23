@@ -1,0 +1,12 @@
+button {
+  width: 150px;
+  height: auto;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #ffcd00;
+}
+
+button:active {
+  border-color: #000 #aaa #aaa #000;
+}
