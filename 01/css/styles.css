@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+
+p {
+  text-indent: 20px;
+}
+
+.title {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -2px;
+  text-decoration: line-through;
+  text-transform: uppercase;
+}
+
+.justify {
+  text-align: justify;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+ul {
+  list-style-type: square;
+  list-style-position: outside;
+
+  color: #114eaf;
+}
+
+ol {
+  list-style-type: decimal-leading-zero;
+}
+
+.table-title {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.table-subtitle {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+table {
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+.table1,
+.table1 thead,
+.table1 tbody,
+.table1-el {
+  border: 1px dashed lightgray;
+}
+
+/* Первая таблица */
+.table1 thead {
+  color: red;
+  text-align: left;
+}
+
+.table1 tbody .table1-el:not(:first-child) {
+  width: 150px;
+}
+
+.table1 tbody .table1-el:first-child {
+  width: 25px;
+}
+
+/* Таблицы для 15 варианта */
+
+/* Общие стили для таблиц из варианта */
+.table-variant {
+  width: 50em;
+  border-spacing: 0;
+  height: auto;
+  text-align: center;
+}
+
+.table-variant,
+.table-variant td,
+.table-variant th {
+  border: 2px solid #000;
+}
+
+.table-variant td,
+.table-variant th {
+  padding: 3px;
+  width: 30px;
+  height: 35px;
+}
+
+/* Таблица 5 */
+
+/* Таблица 10 */
+
+/* Таблица 15 */
