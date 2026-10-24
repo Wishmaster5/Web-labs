@@ -1,0 +1,17 @@
+.container {
+  position: relative;
+}
+
+.container img,
+.container p {
+  position: absolute;
+}
+
+.container p {
+  color: yellow;
+  z-index: 2;
+}
+
+.container img {
+  z-index: 1;
+}

@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  height: 350px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.wrapper-big div {
+  flex: 50%;
+  width: 350px;
+  border-radius: 25px;
+}
+
+.col {
+  flex: 25%;
+  width: 200px;
+  border-radius: 20px;
+  padding-top: 35px;
+}
+
+.col-mini {
+  padding-top: 15px;
+  color: white;
+  font-size: smaller;
+}
+
+.col-black {
+  background-color: black;
+}
+
+.col-blue {
+  background-color: blue;
+}
+
+.col-red {
+  background-color: red;
+}
+
+.col-yellow {
+  background-color: yellow;
+}

@@ -1,0 +1,19 @@
+#wrapper {
+  display: flex;
+}
+
+#wrapper div {
+  width: 33%;
+}
+
+#sectionA {
+  background-color: red;
+}
+
+#sectionB {
+  background-color: green;
+}
+
+#sectionC {
+  background-color: blue;
+}
