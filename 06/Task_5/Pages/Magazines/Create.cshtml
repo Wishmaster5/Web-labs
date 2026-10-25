@@ -1,0 +1,59 @@
+﻿@page
+@model Task_5.Pages.Magazines.CreateModel
+
+        @{
+        ViewData["Title"] = "Create";
+        }
+        
+        <h1>Create</h1>
+        
+    <h4>Magazine</h4>
+    <hr />
+    <div class="row">
+    <div class="col-md-4">
+    <form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Magazine.number" class="control-label"></label>
+                <input asp-for="Magazine.number" class="form-control" aria-required="true"/>
+                <span asp-validation-for="Magazine.number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Magazine.month" class="control-label"></label>
+                <input asp-for="Magazine.month" class="form-control" aria-required="true"/>
+                <span asp-validation-for="Magazine.month" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Magazine.publisher" class="control-label"></label>
+                <input asp-for="Magazine.publisher" class="form-control" aria-required="true"/>
+                <span asp-validation-for="Magazine.publisher" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Magazine.year" class="control-label"></label>
+                <input asp-for="Magazine.year" class="form-control" aria-required="true"/>
+                <span asp-validation-for="Magazine.year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Magazine.name" class="control-label"></label>
+                <input asp-for="Magazine.name" class="form-control" aria-required="true"/>
+                <span asp-validation-for="Magazine.name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

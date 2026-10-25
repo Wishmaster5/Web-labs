@@ -1,0 +1,71 @@
+﻿@page
+@model Task_5.Pages.TextBooks.CreateModel
+
+        @{
+        ViewData["Title"] = "Create";
+        }
+        
+        <h1>Create</h1>
+        
+    <h4>TextBook</h4>
+    <hr />
+    <div class="row">
+    <div class="col-md-4">
+    <form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="TextBook.purpose" class="control-label"></label>
+                <input asp-for="TextBook.purpose" class="form-control" aria-required="true"/>
+                <span asp-validation-for="TextBook.purpose" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="TextBook.subject" class="control-label"></label>
+                <input asp-for="TextBook.subject" class="form-control" aria-required="true"/>
+                <span asp-validation-for="TextBook.subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="TextBook.author" class="control-label"></label>
+                <input asp-for="TextBook.author" class="form-control" aria-required="true"/>
+                <span asp-validation-for="TextBook.author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="TextBook.pages_count" class="control-label"></label>
+                <input asp-for="TextBook.pages_count" class="form-control" aria-required="true"/>
+                <span asp-validation-for="TextBook.pages_count" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="TextBook.publisher" class="control-label"></label>
+                <input asp-for="TextBook.publisher" class="form-control" aria-required="true"/>
+                <span asp-validation-for="TextBook.publisher" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="TextBook.year" class="control-label"></label>
+                <input asp-for="TextBook.year" class="form-control" aria-required="true"/>
+                <span asp-validation-for="TextBook.year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="TextBook.name" class="control-label"></label>
+                <input asp-for="TextBook.name" class="form-control" aria-required="true"/>
+                <span asp-validation-for="TextBook.name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

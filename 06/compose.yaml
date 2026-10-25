@@ -1,0 +1,50 @@
+version: '4.6'
+
+services: 
+
+  db:
+    image: postgres:16
+    container_name: db
+    environment: 
+      POSTGRES_DB: RazorPagesAppContext-74d28213-2f83-4314-803d-d30524f964a4
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5430:5432"
+    volumes:
+      - app-volume:/var/lib/postgresql/data
+    networks:
+      - my_network
+  db-1:
+    image: postgres:16
+    container_name: db-1
+    environment: 
+      POSTGRES_DB: Task_5 
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5431:5432"
+    networks:
+      - my_network
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    ports:
+      - "8080:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin 
+    depends_on:
+      - db 
+      - db-1 
+    networks:
+      - my_network 
+
+volumes:
+  app-volume: #
+  pgadmin-data:
+
+networks:
+  my_network:
+

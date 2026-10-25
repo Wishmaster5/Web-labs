@@ -1,0 +1,72 @@
+﻿@page
+@model Task_5.Pages.Books.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<form>
+    <p>
+        Искать книги, вышедшие не раньше: <input type="text" asp-for="SearchYear" /> года
+    </p>
+    <input type="submit" value="Filter" />
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].pages_count)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].publisher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Book) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pages_count)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.publisher)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

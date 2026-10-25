@@ -1,0 +1,49 @@
+﻿@page
+@model Task_5.Pages.Magazines.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Magazine</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Magazine.number)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Magazine.number)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Magazine.month)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Magazine.month)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Magazine.publisher)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Magazine.publisher)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Magazine.year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Magazine.year)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Magazine.name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Magazine.name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Magazine.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

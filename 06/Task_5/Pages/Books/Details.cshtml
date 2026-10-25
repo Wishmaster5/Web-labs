@@ -1,0 +1,55 @@
+﻿@page
+@model Task_5.Pages.Books.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Book.subject)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Book.subject)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Book.author)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Book.author)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Book.pages_count)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Book.pages_count)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Book.publisher)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Book.publisher)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Book.year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Book.year)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Book.name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Book.name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Book.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
